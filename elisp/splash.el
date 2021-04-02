@@ -9,7 +9,7 @@
   (setq dashboard-items '((recents . 15) (agenda . 5)))
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
-  (setq dashboard-startup-banner 3)
+  (setq dashboard-startup-banner nil)
   (dashboard-setup-startup-hook)
   )
 

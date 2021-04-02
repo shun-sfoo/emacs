@@ -21,3 +21,9 @@
 
 ;; Splash screen
 (require 'splash)
+
+;; org
+(require 'init-org)
+
+;; lsp
+(require 'lsp)
