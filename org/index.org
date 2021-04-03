@@ -1,7 +1,7 @@
 * I have a plan
 
 ** Programming
-***  Rust by Example [50%]
+***  Rust by Example [33%]
 **** DONE April 1
      - 8. Flow Of Control
      - 9. Functions
@@ -11,7 +11,37 @@
      - 13. Atrributes
 **** TODO April 2
      - 14 Generics
+       #+begin_src rust
+      Struct Enum;
+      Struct Null;
+      Trait DoubleDrop<T> {
+        fn double_drop(self, _:T);
+      }
+      impl<T, U> DoubleDrop for U {
+        fn double_drop(self, _:T){}
+      }
+      fn main() {
+        let enum = Enum;
+        let null = Null;
+        enum.double_drop(null);
+      }
+       #+end_src
+       - where
+	 #+begin_src rust
+         use std::fmt::Debug;
+         trait PrintInOption {
+           fn print_in_option(self);
+         }
+         impl<T> PrintInOption for T
+         where Option<T> : Debug {
+           fn print_in_option(self) {
+             println!("{:?}", Some(self));
+           }
+         }
+	 #+end_src
 
+**** TODO
+     - transfer LoveIt to Even blog
 ** English
 
 ** Reading

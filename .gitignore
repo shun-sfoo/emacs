@@ -6,3 +6,5 @@ recentf
 custom.el
 .DS_Store
 .lsp-session-v1
+*.log
+auto-save-list
