@@ -1,29 +1,12 @@
-;; elisp files
 (add-to-list 'load-path (concat user-emacs-directory "elisp"))
 
-;; Base configuration
-(require 'base)
+(setq custom-file (expand-file-name "elisp/init-custom.el" user-emacs-directory))
+(load-file custom-file)
 
-;; Theme
-(require 'theme)
-
-;; Evil mode
-(require 'vim)
-
-;; Completion
-(require 'completion)
-
-;; Project management
-(require 'workspace)
-
-;; Git using Magit
-(require 'vcs)
-
-;; Splash screen
-(require 'splash)
-
-;; org
+(require 'init-base)
+(require 'init-packages)
+(require 'init-ui)
+(require 'init-completion)
+(require 'init-enhance)
 (require 'init-org)
-
-;; lsp
-(require 'lsp)
+; (require 'init-meow)

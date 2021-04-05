@@ -8,3 +8,4 @@ custom.el
 .lsp-session-v1
 *.log
 auto-save-list
+places
