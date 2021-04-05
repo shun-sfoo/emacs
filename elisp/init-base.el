@@ -9,12 +9,10 @@
 ;; Show matching parentheses
 (show-paren-mode 1)
 
-
 ;; 保存上次光标所在位置
 (require 'saveplace)
 (setq-default save-place t)
 (save-place-mode 1)
-
 
 (tool-bar-mode -1)
 
@@ -30,7 +28,6 @@
 ;; 在mode-line显示文件大小
 (size-indication-mode t)
 
-
 ;; 禁止生成~备份文件
 (setq make-backup-files nil)
 
@@ -39,4 +36,31 @@
 
 (setq default-frame-alist '((height . 40) (width . 150)))
 
-(electric-pair-mode t)
+;; for parinfer-rust-mode specified
+(add-hook 'org-mode-hook (lambda () (electric-pair-local-mode 1)))
+
+;; 设置光标的样式为竖线
+(setq-default cursor-type 'bar)
+(global-prettify-symbols-mode 1)
+(defun my-add-pretty-lambda ()
+  "make some word or string show as pretty Unicode symbols"
+  (setq prettify-symbols-alist
+        '(
+          ("lambda" . 955) ; λ
+          ("->" . 8594)    ; →
+          ("=>" . 8658)    ; ⇒
+          ("map" . 8614))))   ; ↦
+
+(add-hook 'prog-mode-hook 'my-add-pretty-lambda)
+
+;; Use a hook so the message doesn't get clobbered by other messages.
+(add-hook 'emacs-startup-hook
+    (lambda ()
+        (message "Emacs ready in %s with %d garbage collections."
+            (format "%.2f seconds"
+                (float-time
+                    (time-subtract after-init-time before-init-time)))
+            gcs-done)))
+
+;; use space instead of tabs
+(setq-default indent-tabs-mode nil);  # put this in your .emacs file

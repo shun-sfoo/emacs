@@ -9,3 +9,4 @@ custom.el
 *.log
 auto-save-list
 places
+parinfer-rust
