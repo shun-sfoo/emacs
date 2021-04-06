@@ -1,9 +1,5 @@
 (provide 'init-packages)
 
-;; emacs-china
-(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-                         ("melpa" . "http://elpa.emacs-china.org/melpa/")))
-
 (require 'package)
 (package-initialize)
 
@@ -21,8 +17,8 @@
          org-superstar
          org-fancy-priorities
          rainbow-delimiters
+         doom-themes
          parinfer-rust-mode))
-         
 
 (mapcar (lambda (p)
           (unless (package-installed-p p)

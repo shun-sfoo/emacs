@@ -10,3 +10,4 @@ custom.el
 auto-save-list
 places
 parinfer-rust
+dump.el
