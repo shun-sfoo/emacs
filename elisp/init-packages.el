@@ -1,7 +1,8 @@
 (provide 'init-packages)
 
-(require 'package)
-(package-initialize)
+;; auto done in dump and init.el
+;;(require 'package)
+;;(package-initialize)
 
 (unless package-archive-contents
   (package-refresh-contents))
@@ -15,9 +16,7 @@
          all-the-icons
          dashboard
          org-superstar
-         org-fancy-priorities
          rainbow-delimiters
-         doom-themes
          parinfer-rust-mode))
 
 (mapcar (lambda (p)
