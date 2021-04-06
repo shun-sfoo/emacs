@@ -11,7 +11,7 @@
 (setq dashboard-items '((recents . 15) (agenda . 5)))
 (setq dashboard-set-heading-icons t)
 (setq dashboard-set-file-icons t)
-(setq dashboard-startup-banner nil)
+(setq dashboard-startup-banner 3)
 (dashboard-setup-startup-hook)
 
 ;; exec-path-from-shell
@@ -24,4 +24,3 @@
 (require 'parinfer-rust-mode)
 (setq parinfer-rust-auto-download t)
 (add-hook 'emacs-lisp-mode-hook 'parinfer-rust-mode)
-

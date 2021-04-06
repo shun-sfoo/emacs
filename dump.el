@@ -9,7 +9,7 @@
 ;; (package-initialize) doens’t require each package, we need to load
 ;; those we want manually
 ;; exculde parinfer-rust-mode
-(dolist (package '(ivy which-key company org rainbow-delimiters dashboard all-the-icons org-superstar))
+(dolist (package '(selectrum orderless consult selectrum-prescient which-key company org rainbow-delimiters dashboard all-the-icons org-superstar exec-path-from-shell meow))
   (require package))
 
 ;; pre-load themes spacemacs-theme no use because can't require spacemacs-theme

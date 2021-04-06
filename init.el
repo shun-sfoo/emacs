@@ -21,14 +21,6 @@
                     (lisp-interaction-mode)))))
   ;; add load-path's and load autoload files
   (package-initialize))
-  
-;; load theme
-;;(when window-system
-;;  (+if-dump
-;;      (enable-theme 'doom-one-light)
-;;    (load-theme 'doom-one-light)))
-;; for spacemacs just
-(load-theme 'spacemacs-light t)
 
 (defun neo-dump ()
   "Dump Emacs."
@@ -52,4 +44,4 @@
 (require 'init-completion)
 (require 'init-enhance)
 (require 'init-org)
-; (require 'init-meow)
+(require 'init-meow)
