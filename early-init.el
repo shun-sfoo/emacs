@@ -84,3 +84,10 @@
 
 ;; use space instead of tabs
 (setq-default indent-tabs-mode nil);  # put this in your .emacs file
+;; recentf minor mode
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 15)
+
+;; 关闭启动画面
+(setq inhibit-splash-screen t)

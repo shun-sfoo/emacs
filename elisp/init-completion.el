@@ -15,6 +15,11 @@
 (setq orderless-skip-highlighting (lambda () selectrum-is-active))
 (setq selectrum-highlight-candidates-function #'orderless-highlight-matches)
 (require 'consult)
+(require 'marginalia)
+(marginalia-mode)
+
+(define-key global-map  (kbd "C-x b")  #'consult-buffer) 
+
 
 ;; company
 (setq company-idle-delay 0.1)

@@ -13,12 +13,12 @@
         selectrum-prescient
         orderless
         consult
+        marginalia
+        embark
         spacemacs-theme
         exec-path-from-shell
         which-key
         company
-        all-the-icons
-        dashboard
         org-superstar
         rainbow-delimiters
         meow
@@ -28,3 +28,4 @@
           (unless (package-installed-p p)
             (package-install p t)))
         package-selected-packages)
+
