@@ -1,0 +1,11 @@
+* emacs 配置
+** TODO early-init 
+** TODO dump.el 
+** NEXT meow
+ 使用 meow 多点编辑方式入下
+ 1. `meow-mark (m)` 标记需要更改的单词
+ 2. `meow-change (c)` 修改
+ 3. `meow-save (y)` 保存修改
+ 4. `meow-search (n)` 寻找下一个匹配项
+ 5. `meow-replace (r)` 替换
+    

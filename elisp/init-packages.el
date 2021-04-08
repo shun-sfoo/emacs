@@ -28,4 +28,3 @@
           (unless (package-installed-p p)
             (package-install p t)))
         package-selected-packages)
-
