@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (defvar +dumped nil
   "non-nil when a dump file is loaded.
 (Because dump.el sets this variable).")
@@ -22,7 +24,7 @@
   ;; add load-path's and load autoload files
   (package-initialize))
 
-(defun neo-dump ()
+(defun +dump ()
   "Dump Emacs."
   (interactive)
   (let ((buf "*dump process*"))
@@ -39,9 +41,12 @@
 (setq custom-file (expand-file-name "elisp/init-custom.el" user-emacs-directory))
 (load-file custom-file)
 
+(require 'init-base)
+(require 'init-hook)
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-completion)
 (require 'init-enhance)
 (require 'init-org)
 (require 'init-meow)
+(require 'init-keybinds)
