@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (provide 'init-org)
 
 (setq org-agenda-files (list "~/git/org/"))
@@ -6,10 +7,6 @@
 ;; org-superstar
 (require 'org-superstar)
 (add-hook 'org-mode-hook (lambda ()(org-superstar-mode 1)))
-
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
 
 ;; 设置任务流程
 (setq org-todo-keywords
@@ -38,26 +35,24 @@
 (setq org-directory "~/git/org")
 (setq org-default-notes-file "~/git/org/refile.org")
 
-;; I use C-c c to start capture mode
-(global-set-key (kbd "C-c c") 'org-capture)
 
 ;; Capture templates for: TODO tasks, Notes, appointments, phone calls, meetings, and org-protocol
 (setq org-capture-templates
-      (quote (("t" "todo" entry (file "~/git/org/refile.org")
+      (quote (("t" "todo" entry (file org-default-notes-file)
                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("r" "respond" entry (file "~/git/org/refile.org")
+              ("r" "respond" entry (file org-default-notes-file)
                "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
-              ("n" "note" entry (file "~/git/org/refile.org")
+              ("n" "note" entry (file org-default-notes-file)
                "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
               ("j" "Journal" entry (file+datetree "~/git/org/diary.org")
                "* %?\n%U\n" :clock-in t :clock-resume t)
-              ("w" "org-protocol" entry (file "~/git/org/refile.org")
+              ("w" "org-protocol" entry (file org-default-notes-file)
                "* TODO Review %c\n%U\n" :immediate-finish t)
-              ("m" "Meeting" entry (file "~/git/org/refile.org")
+              ("m" "Meeting" entry (file org-default-notes-file)
                "* MEETING with %? :MEETING:\n%U" :clock-in t :clock-resume t)
-              ("p" "Phone call" entry (file "~/git/org/refile.org")
+              ("p" "Phone call" entry (file org-default-notes-file)
                "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
-              ("h" "Habit" entry (file "~/git/org/refile.org")
+              ("h" "Habit" entry (file org-default-notes-file)
                "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
 
 

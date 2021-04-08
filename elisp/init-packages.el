@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (provide 'init-packages)
 
 ;; auto done in dump and init.el

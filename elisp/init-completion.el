@@ -1,5 +1,5 @@
+;; -*- lexical-binding: t; -*-
 (provide 'init-completion)
-
 (require 'orderless)
 ;; selectrum
 (selectrum-mode +1)
@@ -17,9 +17,6 @@
 (require 'consult)
 (require 'marginalia)
 (marginalia-mode)
-
-(define-key global-map  (kbd "C-x b")  #'consult-buffer) 
-
 
 ;; company
 (setq company-idle-delay 0.1)

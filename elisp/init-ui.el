@@ -1,5 +1,5 @@
+;; -*- lexical-binding: t; -*-
 (provide 'init-ui)
-
 ;; Set default font size
 (defvar neo/default-font-size 160)
 (set-face-attribute 'default nil :font "Inconsolata" :height neo/default-font-size)
